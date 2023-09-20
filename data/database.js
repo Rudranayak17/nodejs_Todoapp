@@ -4,5 +4,5 @@ export const connectDB=()=>{
 
     mongoose.connect(process.env.MONGO_URI,{
         dbName:"backenddApi"
-    }).then(()=>{console.log("DataBase Connected")}).catch((e)=>{console.log(e)})
+    }).then((c)=>{console.log("DataBase Connected",c.connection.host)}).catch((e)=>{console.log(e)})
 }
